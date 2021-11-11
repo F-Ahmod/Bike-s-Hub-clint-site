@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button} from '@mui/material';
+import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
 import { Grid } from '@mui/material';
 import useAuth from './../Hooks/useAuth';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { NavLink, useLocation, useHistory } from 'react-router-dom';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { loginUser, singinWithGoogle} = useAuth();
+    const { loginUser, singinWithGoogle,loading,user} = useAuth();
     const location = useLocation();
     const history = useHistory();
 
@@ -29,6 +29,9 @@ const Login = () => {
     }
     return (
         <Container className="mt-5" style={{backgroundColor:"lightGreen",width:"400px"}}>
+            
+            {loading && <CircularProgress />}
+                      
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} >
                     <Typography variant="body1" gutterBottom className="text-light fs-2">Please Login</Typography>
