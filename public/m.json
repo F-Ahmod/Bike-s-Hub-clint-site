@@ -1,0 +1,161 @@
+[
+    {
+        
+        "img": "https://i.ibb.co/Y0ySNYb/b16.jpg",
+        "specialty":"bike",
+        "price":"120000",
+        "rating":"3",
+        "name":"Suzuki 150cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/dbtSqHv/b15.jpg",
+        "specialty": "bike",
+        "price":"122360",
+        "rating":"5",
+
+        "name":"Kawasaki 170cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/8sg4Qr4/b14.jpg",
+        "specialty": "bike",
+        "price":"40000",
+        "rating":"4",
+
+        "name":"Kawasaki 180cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/CBCtK39/b13.jpg",
+        "specialty": "bike",
+        "price":"220600",
+        "rating":"3",
+
+        "name":"Kawasaki 150cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/Vjgn868/b12.jpg",
+        "specialty": "bike",
+        "price":"322499",
+        "rating":"2",
+
+        "name":"Hero 190cc"
+        
+      },
+    
+    {
+        
+        "img": "https://i.ibb.co/pJMkL3r/b11.jpg",
+        "specialty": "bike",
+        "price":"44499",
+        "rating":"1",
+
+        "name":"Kawasaki 180cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/PGpt6Ty/b9.jpg",
+        "show": "cycle",
+        "price":"500499",
+        "rating":"3",
+
+        "name":"Honda 180"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/RN8SKQJ/b8.jpg",
+        "show": "cycle",
+        "price":"333499",
+        "rating":"5",
+
+        "name":"Kawasaki 200cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/C9QTWMq/b5.jpg",
+        "show": "cycle",
+        "price":"44499",
+        "rating":"3",
+
+        "name":"Suzuki 220cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/4SqPGqT/b4.jpg",
+        "show": "cycle",
+        "price":"444499",
+        "rating":"4",
+
+        "name":"Apace 200cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/BtxJghp/b33.jpg",
+        "show": "cycle",
+        "price":"666499",
+        "rating":"2",
+
+        "name":"BMW 230cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/h1NKhSb/b2.jpg",
+        "show": "cycle",
+        "price":"900499",
+        "rating":"3",
+
+        "name":"Tacla 400544"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/SmxX07f/b1.jpg",
+        "show": "cycle",
+        "price":"762499",
+        "rating":"5",
+
+        "name":"Suzuki 300cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/JKk6Z1L/m13.jpg",
+        "show": "cycle",
+        "price":"143400",
+        "rating":"3",
+        "name":"Honda 190cc"
+        
+      },
+    {
+        
+        "img": "https://i.ibb.co/Jmh9B5d/m15.jpg",
+        "show": "cycle",
+        "price":"230000",
+        "rating":"4",
+        "name":"BMW 300cc"
+        
+      },
+    {
+        
+        "img": " https://i.ibb.co/4ghM0B9/m16.jpg",
+        "show": "cycle",
+        "price":"554339",
+        "rating":"3",
+
+        "name":"Suzuki 160cc "
+        
+      }
+    
+]

@@ -1,0 +1,16 @@
+.containe{
+    background-image: url("../../imges/bg.jpg");
+  background-repeat: no-repeat;
+  background-size:90%;
+  height: 600px;
+  background-position: center;
+
+  
+}
+.bgtext{
+    align-items: bottom;
+}
+body{
+    background-color: black;
+    color: wheat;
+}
