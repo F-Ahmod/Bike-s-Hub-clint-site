@@ -1,29 +1,21 @@
-.container{
+.clint-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 12px;
-}
-.icon-color{
-    color: goldenrod;
-}
-
-body{
-    overflow-x: hidden;
-}
-html{
-    overflow-x: hidden;
+    grid-gap: 20px;
+   
 }
 
 @media only screen and (max-width:688px) {
-    .container{
+    .clint-container{
         grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-items: center;
-        
+       
+
     }
 }
 @media only screen and (min-width:689px) and (max-width: 991px){
-    .container{
+    .clint-container{
         grid-template-columns: repeat(2, 1fr);
     }
 }

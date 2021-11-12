@@ -16,6 +16,7 @@ import NotFound from './pages/NotFound/NotFound';
 import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import About from './pages/About/About';
 import Banner2 from './pages/Banner2/Banner2';
+import Clint from './pages/Clint/Clint';
 
 function App() {
   return (
@@ -61,6 +62,9 @@ function App() {
         </Route>
         <Route  path="/banner2">
           <Banner2></Banner2>
+        </Route>
+        <Route  path="/clint">
+          <Clint></Clint>
         </Route>
         <Route  path="/ManageAllOrders">
           <ManageAllOrders></ManageAllOrders>

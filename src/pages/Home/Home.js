@@ -6,6 +6,7 @@ import Header from '../Header/Header';
 import BestBike from './../BestBike/BestBike';
 import ExploreBike from './../ExploreBike/ExploreBike';
 import Banner2 from './../Banner2/Banner2';
+import Clint from '../Clint/Clint';
 
 
 
@@ -18,6 +19,7 @@ const Home = () => {
             <AddBikeHome></AddBikeHome>
             <Banner2></Banner2>
             <ExploreBike></ExploreBike>
+            <Clint></Clint>
             
             <Footer></Footer>
            
