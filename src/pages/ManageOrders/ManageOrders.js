@@ -73,8 +73,7 @@ const ManageOrders = () => {
             <th className="text-light">Product Name</th>
             <th className="text-light">Product img</th>
             <th className="text-light">Product Price</th>
-            <th className="text-light">present Status</th>
-            <th className="text-light">Update Status</th>
+            <th className="text-light">Product Status</th>
             <th className="text-light">Action</th>
           </tr>
         </thead>
@@ -84,9 +83,7 @@ const ManageOrders = () => {
               <td className="text-light">{pd.name}</td>
               <td className="text-light"><img style={{width:"70px",height:"60px"}} src={pd.img} alt="" /></td>
               <td className="text-light">${pd.price}</td>
-              <td  type="button" class="bg-dark text-light rounded "><i class="far fa-check-square"></i> {pd?.status}</td>
               <td>
-
               <select onClick={() =>approve(pd._id)} class="form-select text-dark" aria-label="Default select example">
   
                <option value={pd?.status}> {pd?.status}</option>
