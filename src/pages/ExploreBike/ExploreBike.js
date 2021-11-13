@@ -13,7 +13,7 @@ const ExploreBike = () => {
         <div className="m-5  round-5">
          <Carousel fade>
   <Carousel.Item>
-    <img style={{width:"90%",height:"550px"}}
+    <img style={{width:"100%",height:"550px"}}
       className="d-block w-100"
       src={img}
       alt="First slide"
@@ -21,7 +21,7 @@ const ExploreBike = () => {
    
   </Carousel.Item>
   <Carousel.Item>
-    <img style={{width:"90%",height:"550px"}}
+    <img style={{width:"100%",height:"550px"}}
       className="d-block w-100"
       src={img1}
       alt="First slide"
@@ -30,7 +30,7 @@ const ExploreBike = () => {
   </Carousel.Item>
   
   <Carousel.Item>
-    <img style={{width:"90%",height:"550px"}}
+    <img style={{width:"100%",height:"550px"}}
       className="d-block w-100"
       src={img2}
       alt="Second slide"

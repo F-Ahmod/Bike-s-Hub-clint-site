@@ -13,7 +13,7 @@ const {leLogout,user}=useAuth();
               <Link className="navbar-brand" to="/home"> <img src="" alt="" srcset="" width="60" /> <span className="text-success">B</span>ike's Hub</Link>
                       {         
                    user.email &&
-                   <p style={{marginLeft:"55%"}}>
+                   <p style={{marginLeft:"52%"}}>
                     <span className="me-2 text-primary">{user?.displayName}</span>
                     <img className="rounded-circle" width="30" height="30" src={user?.photoURL} alt="" />
                     
