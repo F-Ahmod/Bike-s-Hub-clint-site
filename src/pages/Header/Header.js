@@ -1,18 +1,11 @@
 import React from 'react';
-import { useHistory }  from 'react-router';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from './../Hooks/useAuth';
 
 const Header = () => {
   const {leLogout,user}=useAuth();
 
-  
-  const history = useHistory()
-  const controlMYOrders=()=>{
 
-    history.push(`/myOrder/${user?.email}`)
-    
-  }
     return (
            <div>
             <nav className="navbar navbar-expand-lg  navbar navbar-dark bg-dark">
@@ -20,7 +13,7 @@ const Header = () => {
               <Link className="navbar-brand" to="/home"> <img src="" alt="" srcset="" width="60" /> <span className="text-success">B</span>ike's Hub</Link>
                       {         
                    user.email &&
-                   <p style={{marginLeft:"50%"}}>
+                   <p style={{marginLeft:"55%"}}>
                     <span className="me-2 text-primary">{user?.displayName}</span>
                     <img className="rounded-circle" width="30" height="30" src={user?.photoURL} alt="" />
                     
@@ -44,7 +37,7 @@ const Header = () => {
         <>
         <Link className="nav-link active" to="/dashBoard">DashBoard</Link>
 
-        <button className=" active " onClick={leLogout} >Sign Out</button>
+        <button className=" active " onClick={leLogout} >LogOut <i class="fas fa-sign-out-alt"></i></button>
         </>
         }
       </div>

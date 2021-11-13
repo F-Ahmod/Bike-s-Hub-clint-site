@@ -3,6 +3,9 @@ import { Card } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import Rating from 'react-rating';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const ExploreBikes = () => {
     const [bike,setBike]=useState([]);
@@ -19,25 +22,32 @@ const ExploreBikes = () => {
     const handelSingleBike=id=>{
         history.push(`/singleBike/${id}`)   
     }
+    useEffect(()=>{
+        AOS.init({
+            offset:100,
+            duration:1000,
+            easing: 'ease',
+        })
+      },[]);
     return (
 
         <div >
-            <div className="container mb-5 mt-5">
+            <div className="container mb-5 mt-5" >
             {
-               bike.map(bike =>bike?.show ==="cycle" && <div>
+               bike.map(bike =>bike?.show ==="cycle" && <div data-aos="fade-up">
                    <Card className="singleCard  mx-auto mt-5 mb-5 shadow" style={{ width: '19rem' }}>
-               <Card.Img variant="top" src={bike.img} width="300" />
+               <Card.Img variant="top" className="mx-auto mt-2 rounded shadow" style={{height:"190px",width:"90%"}} src={bike.img} width="300" />
                  <Card.Body>
-                 <Card.Title>{bike.name}</Card.Title>
+                 <Card.Title className="text-dark">{bike?.name}</Card.Title>
                  
-                 <Card.Text>Price $ {bike.price}
+                 <Card.Text className="text-dark">Price $ {bike?.price}
                  
                  </Card.Text>            
                 
                </Card.Body>
                
                <Rating
-                initialRating={bike.rating}
+                initialRating={bike?.rating}
                 fullSymbol="fas fa-star icon-color"
                 emptySymbol="far fa-star icon-color"
                 readonly></Rating>

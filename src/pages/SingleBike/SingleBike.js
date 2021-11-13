@@ -5,12 +5,14 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from './../Hooks/useAuth';
 import { NavLink } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const SingleBike = () => {
   const {user}=useAuth();
+ 
     const {id}=useParams();
     const [singleBike,setSingleBike]=useState({});
-    useEffect(()=>{
+        useEffect(()=>{
         fetch(`https://young-bayou-81881.herokuapp.com/bike/${id}`)
         .then(res=>res.json())
         .then(data =>setSingleBike(data))
@@ -36,20 +38,15 @@ const SingleBike = () => {
       console.log(data);
         axios.post('https://young-bayou-81881.herokuapp.com/bike',data)
         .then(res=>res.json())
-        .then(data =>{ 
-         
-          if(data?.insertedId  ){
-            alert('added to card')
-             
-             
-              reset()
-               
-            }
-            else{
-              alert('wrong')
-            }
+        .then((data) => {
+          alert('jjjjjj')
+          // if (data.insertedId) {
+          //   Swal.fire("Added", "Added success");
+          // } else {
            
-        })
+          // }
+          reset()
+        });
         
 
     };
@@ -73,7 +70,7 @@ const SingleBike = () => {
             </div>
              <div className="col-md-6">
              <div className="mt-5 mx-auto mb-2 bg-light " style={{width:"400px",height:"350px"}}>
-            <h2>Please give information to Confirm order </h2>
+            <h2>Please Confirm your order </h2>
             <div className="">
             <form onSubmit={handleSubmit(onSubmit)} className="mt-3 ">
             <input defaultValue={user.displayName} className="w-50 mb-1 mt-3 h-3" {...register("name")} Placeholder="Name" />
@@ -88,8 +85,7 @@ const SingleBike = () => {
                                 <option value="normal">normal</option>
                             </select>
             <br />
-            <textarea className="w-50 mb-1" {...register("dec" )} Placeholder="Write your comment"/>
-            <br />
+           
            
             <button onClick={addToCard} type="button" class="btn btn-success ">Add to Card</button>
           </form>

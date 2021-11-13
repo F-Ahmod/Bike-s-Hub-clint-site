@@ -28,23 +28,20 @@ const Login = () => {
         singinWithGoogle(location, history)
     }
     return (
-        <Container className="mt-5" style={{backgroundColor:"lightGreen",width:"400px"}}>
-            
-            {loading && <CircularProgress />}
-                      
+        <Container className="mt-5" style={{backgroundColor:"lightGreen",width:"400px"}}>             
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} >
                     <Typography variant="body1" gutterBottom className="text-light fs-2">Please Login</Typography>
                     <form onSubmit={handleLoginSubmit}>
                         <TextField 
-                            sx={{ width: '75%', m: 1,light: '#0066ff' }}
+                            sx={{ width: '50%', m: 1,light: '#0066ff' }}
                             id="standard-basic"
                             label="Your Email"
                             name="email"
                             onBlur={handleLoginInput}
                             variant="standard" />
                         <TextField
-                            sx={{ width: '75%', m: 1 }}
+                            sx={{ width: '50%', m: 1 }}
                            
                             id="standard-basic"
                             label="Your Password"
@@ -53,7 +50,7 @@ const Login = () => {
                             onBlur={handleLoginInput}
                             variant="standard" />
 
-                        <Button sx={{ width: '50%', m: 1 }} type="submit" variant="contained" color="success">Login</Button>
+                        <Button sx={{ width: '50%'}} type="submit" variant="contained" color="success">Login</Button>
                          <br />
 
                         <Button onClick={handleGoogleSignIn} sx={{ width: '50%', m: 1 }} variant="contained" color="success">Google Sign In</Button>

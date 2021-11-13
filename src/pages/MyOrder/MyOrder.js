@@ -6,33 +6,36 @@ import useAuth from './../Hooks/useAuth';
 
 
 const MyOrder = () => {
-   
-    const {user}=useAuth()
-    
-    
-    const [myOrder,setMyOrder]=useState([])
-    useEffect(() => {
-      const url = `https://young-bayou-81881.herokuapp.com/bookBike/${user?.email}`
-       
-         fetch(url)
-             .then(res => res.json())
-             .then(data => setMyOrder(data));
-     }, [])
+
+  const { user } = useAuth()
 
 
-   // delete
-   const deleteOrder =id=>{
-    const url=`https://young-bayou-81881.herokuapp.com/bookBike/${id}`;
-   fetch(url,{
-    method:'DELETE',
-    headers:{
-        "content-type":"application/json"
-    }
-})
-.then(res=>res.json())
-.then(data=>{
-    if(data.deletedCount >0){
-        Swal.fire({
+  const [myOrder, setMyOrder] = useState([])
+  useEffect(() => {
+
+
+    fetch(`https://young-bayou-81881.herokuapp.com/orderBike/${user?.email}`)
+
+      .then(res => res.json())
+      .then(data => setMyOrder(data));
+  }, [user.email])
+
+
+  // delete
+  const deleteOrder = id => {
+    console.log(id);
+    const url = `https://young-bayou-81881.herokuapp.com/bookBike/${id}`;
+    fetch(url, {
+      // mode: 'no-cors',
+      method: 'DELETE',
+      headers: {
+        "content-type": "application/json"
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        if (data.deletedCount > 0) {
+          Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
             icon: 'warning',
@@ -46,26 +49,24 @@ const MyOrder = () => {
                 'Deleted!',
                 'Your food has been deleted from your orders.',
                 'success'
-                
               )
             }
           })
-        const reminingUsers=myOrder.filter(user=> user._id !==id)
-        setMyOrder(reminingUsers)
-    }
-    
-});
+          const reminingUsers = myOrder.filter(user => user._id !== id)
+          setMyOrder(reminingUsers)
+        }
 
-}
+      });
 
-    return (
+  }
 
-        <div>
-          
-            <Table striped bordered hover>
+  return (
+
+    <div>
+
+      <Table striped bordered hover>
         <thead >
-          <tr>
-            <th className="text-light">Count</th>
+          <tr>         
             <th className="text-light">Product Name</th>
             <th className="text-light">Product img</th>
             <th className="text-light">Product Price</th>
@@ -73,25 +74,23 @@ const MyOrder = () => {
             <th className="text-light">Action</th>
           </tr>
         </thead>
-        {myOrder?.map((pd, index) => (
+        {myOrder?.map((pd) => (
           <tbody>
-            <tr>
-              <td className="text-light">{index}</td>
+            <tr>            
               <td className="text-light">{pd.name}</td>
-              <td className="text-light"><img style={{width:"70px",height:"60px"}} src={pd.img} alt="" /></td>
+              <td className="text-light"><img style={{ width: "70px", height: "60px" }} src={pd.img} alt="" /></td>
               <td className="text-light">${pd.price}</td>
-              <button  type="button" class="bg-dark text-light rounded ">{pd?.status}</button>
+              <button type="button" class="bg-dark text-light rounded "><i class="far fa-check-square"></i> {pd?.status}</button>
               <td>
-              <button onClick={()=>deleteOrder(pd._id)} type="button" class="btn btn-danger ">Delete</button>
+                <button onClick={() => deleteOrder(pd._id)} type="button" class="btn btn-danger ">  <i class="fas fa-trash "></i> Delete</button>
               </td>
-              
             </tr>
           </tbody>
         ))}
       </Table>
-        </div>
+    </div>
 
-    );
+  );
 };
 
 export default MyOrder;

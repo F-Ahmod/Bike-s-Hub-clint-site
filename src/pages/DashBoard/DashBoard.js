@@ -1,14 +1,15 @@
-
-
 import React, { useEffect } from "react";
-import { Switch, Route, Link, useRouteMatch, NavLink } from "react-router-dom";
+import { Switch, Route, useRouteMatch, NavLink } from "react-router-dom";
 import './DashBoard.css';
-import useAuth from './../Hooks/useAuth';
-import ManageAllOrders from './../ManageAllOrders/ManageAllOrders';
+import useAuth from './../Hooks/useAuth'
 import MyOrder from './../MyOrder/MyOrder';
 import Review from './../Review/Review';
+import Pay from './../Pay/Pay';
 import MakeAdmin from './../MakeAdmin/MakeAdmin';
 import { useState } from 'react';
+import AddBike from './../../AddBike/AddBike';
+import ManageOrders from './../ManageOrders/ManageOrders';
+import Banner from "../Banner/Banner";
 
 
 const Dashbaord = () => {
@@ -27,7 +28,7 @@ const Dashbaord = () => {
         }
       });
   }, [user?.email]);
-  // console.log(isAdmin);
+  
   return (
     <div>
       <div className="dashboard-container ">
@@ -35,28 +36,44 @@ const Dashbaord = () => {
           <div className="col-md-3 ">
             <div className="dashboard">
               <h5>Dashboard</h5>
+              {         
+                   user.email &&
+                   <p style={{marginLeft:"55%"}}>
+                    <span className="me-2 text-primary">{user?.displayName}</span>
+                  
+                   </p>
+                }
               
              <div>
-               <NavLink to="/">Go Home</NavLink>
-             <NavLink to={`${url}/myOrder`}>
-                <li className="dashboard-menu mt-5">my Orders</li>
+               <NavLink className="menu-bar text" to="/">Go Home</NavLink>
+             <NavLink className="text" to={`${url}/myOrder`}>
+                <li className="menu-bar mt-5">my Orders</li>
               </NavLink>
               
-              <NavLink to={`${url}/review`}>
-                <li className="dashboard-menu mt-5">Review</li>
+              <NavLink className="text" to={`${url}/review`}>
+                <li className="menu-bar mt-5">Review</li>
+              </NavLink>
+              <NavLink className="text" to={`${url}/pay`}>
+                <li className="menu-bar mt-5">Payment</li>
               </NavLink>
              </div>
 
               <div className="admin-dashboard">
                 {admin==='admin' && (
-                  <NavLink to={`${url}/manageAllOrders`}>
-                  <li className="dashboard-menu mt-5">Manage All Orders</li>
+                  <NavLink className="text" to={`${url}/manageOrders`}>
+                  <li className="menu-bar mt-5">Manage  Orders</li>
                 </NavLink>
                 
                 )}
                 {admin==='admin' && (
-                  <NavLink to={`${url}/makeAdmin`}>
-                  <li className="dashboard-menu">Make Admin</li>
+                  <NavLink className="text" to={`${url}/makeAdmin`}>
+                  <li className="menu-bar">Make Admin</li>
+                </NavLink>
+                
+                )}
+                {admin==='admin' && (
+                  <NavLink className="text" to={`${url}/addBike`}>
+                  <li className="menu-bar">Add New Bike</li>
                 </NavLink>
                 
                 )}
@@ -68,12 +85,12 @@ const Dashbaord = () => {
           <div className="col-md-9">
             <Switch>
               <Route exact path={path}>
-                <MyOrder></MyOrder>
+                <Banner></Banner>
               </Route>
               
               
-              <Route  path={`${path}/manageAllOrders`}>
-                <ManageAllOrders></ManageAllOrders>
+              <Route  path={`${path}/manageOrders`}>
+                <ManageOrders></ManageOrders>
               </Route>
               <Route  path={`${path}/myOrder`}>
                 <MyOrder></MyOrder>
@@ -82,6 +99,12 @@ const Dashbaord = () => {
               <Route  path={`${path}/review`}>
                 <Review></Review>
               </Route>
+              <Route  path={`${path}/pay`}>
+                <Pay></Pay>
+              </Route>
+              <Route path={`${path}/addBike`}>
+               <AddBike></AddBike>
+               </Route>
               <Route  path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
               </Route>

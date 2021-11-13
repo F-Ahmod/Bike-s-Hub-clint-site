@@ -9,7 +9,6 @@ import AddBike from './AddBike/AddBike';
 import ExploreBikes from './pages/ExploreBikes/ExploreBikes';
 import DashBoard from './pages/DashBoard/DashBoard';
 import MyOrder from './pages/MyOrder/MyOrder';
-import ManageAllOrders from './pages/ManageAllOrders/ManageAllOrders';
 import Review from './pages/Review/Review';
 import MakeAdmin from './pages/MakeAdmin/MakeAdmin';
 import NotFound from './pages/NotFound/NotFound';
@@ -17,12 +16,18 @@ import PrivateRoute from './pages/PrivateRoute/PrivateRoute';
 import About from './pages/About/About';
 import Banner2 from './pages/Banner2/Banner2';
 import Clint from './pages/Clint/Clint';
+import Pay from './pages/Pay/Pay';
+import DReview from './pages/DReview/DReview';
+import Header from './pages/Header/Header';
+import ManageOrders from './pages/ManageOrders/ManageOrders';
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
+     
       <BrowserRouter>
+      <Header></Header>
       <Switch>
         <Route exact path="/">
           <Home></Home>
@@ -54,6 +59,9 @@ function App() {
         <Route  path="/review">
           <Review></Review>
         </Route>
+        <Route  path="/manageOrders">
+          <ManageOrders></ManageOrders>
+        </Route>
         <Route  path="/about">
           <About></About>
         </Route>
@@ -66,9 +74,13 @@ function App() {
         <Route  path="/clint">
           <Clint></Clint>
         </Route>
-        <Route  path="/ManageAllOrders">
-          <ManageAllOrders></ManageAllOrders>
+        <Route  path="/dReview">
+          <DReview></DReview>
         </Route>
+        <Route  path="/pay">
+          <Pay></Pay>
+        </Route>
+        
         <Route  path="*">
           <NotFound></NotFound>
         </Route>

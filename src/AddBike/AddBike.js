@@ -3,6 +3,7 @@ import React from 'react';
 import './AddBike.css'
 
 import { useForm } from 'react-hook-form';
+import { NavLink } from 'react-router-dom';
 
 
 const AddBike = () => {
@@ -27,7 +28,7 @@ const AddBike = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="mt-5 ">
             
            
-            <input className="w-50 mb-3 mt-3 h-3" {...register("title")} Placeholder="title"/>
+            <input className="w-50 mb-3 mt-3 h-3" {...register("name")} Placeholder="title"/>
             <br />
             <input className="w-50 mb-3" {...register("img")}  Placeholder="image URL"/>
             <br />
@@ -39,6 +40,9 @@ const AddBike = () => {
             <input className="" style={{width:"140px",borderRadius:"10px"}} type="submit" />
           </form>
             </div>
+            <div className="text-center mt-3 mb-3"> 
+       <NavLink to="/"><button  type="button" class="btn btn-success "><i class="fas fa-backward"></i></button></NavLink>
+       </div>
         </div>
     );
 };

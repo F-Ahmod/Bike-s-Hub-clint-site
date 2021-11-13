@@ -5,10 +5,16 @@
     cursor: pointer;
   
   }
-  .dashboard-menu {
+  .menu-bar {
     list-style: none;
     margin-top: 10px;
+    color:whitesmoke;
+    
   }
-  .dashboard-menu:hover {
-    color: cyan;
+  .menu-bar:hover {
+    color: rgb(169, 173, 173);
+  }
+  .text{
+    text-decoration: none;
+   
   }
