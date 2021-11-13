@@ -10,6 +10,7 @@ import { useState } from 'react';
 import AddBike from './../../AddBike/AddBike';
 import ManageOrders from './../ManageOrders/ManageOrders';
 import Banner from "../Banner/Banner";
+import DasBanner from "../DasBanner/DasBanner";
 
 
 const Dashbaord = () => {
@@ -85,7 +86,7 @@ const Dashbaord = () => {
           <div className="col-md-9">
             <Switch>
               <Route exact path={path}>
-                <Banner></Banner>
+                <DasBanner></DasBanner>
               </Route>
               
               

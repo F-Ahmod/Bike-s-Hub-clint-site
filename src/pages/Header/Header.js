@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import useAuth from './../Hooks/useAuth';
 
 const Header = () => {
-  const {leLogout,user}=useAuth();
+const {leLogout,user}=useAuth();
 
 
     return (
@@ -25,7 +25,7 @@ const Header = () => {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-        <Link className="nav-link active" to="/about">About</Link>
+        <Link className="nav-link active" to="/findMore">Find More</Link>
         <Link className="nav-link active" to="/exploreBikes">Explore bike</Link>
         
         {!user?.email ?

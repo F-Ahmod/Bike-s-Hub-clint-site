@@ -34,7 +34,7 @@ const ExploreBikes = () => {
         <div >
             <div className="container mb-5 mt-5" >
             {
-               bike.map(bike =>bike?.show ==="cycle" && <div data-aos="fade-up">
+               bike.map(bike =>bike?.show==="cycle" && <div data-aos="fade-up">
                    <Card className="singleCard  mx-auto mt-5 mb-5 shadow" style={{ width: '19rem' }}>
                <Card.Img variant="top" className="mx-auto mt-2 rounded shadow" style={{height:"190px",width:"90%"}} src={bike.img} width="300" />
                  <Card.Body>

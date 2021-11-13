@@ -20,6 +20,11 @@ import Pay from './pages/Pay/Pay';
 import DReview from './pages/DReview/DReview';
 import Header from './pages/Header/Header';
 import ManageOrders from './pages/ManageOrders/ManageOrders';
+import FindMore from './pages/FindeMore/FindMore';
+import Privacy from './pages/Privacy/Privacy';
+import Contact from './pages/Contact/Contact';
+import Footer from './pages/Footer/Footer';
+import DasBanner from './pages/DasBanner/DasBanner';
 
 function App() {
   return (
@@ -80,12 +85,26 @@ function App() {
         <Route  path="/pay">
           <Pay></Pay>
         </Route>
+        <Route  path="/findMore">
+          <FindMore></FindMore>
+        </Route>
+        <Route  path="/privacy">
+          <Privacy></Privacy>
+        </Route>
+        <Route  path="/Contact">
+          <Contact></Contact>
+        </Route>
+        <Route  path="/dasbanner">
+          <DasBanner></DasBanner>
+        </Route>
         
         <Route  path="*">
           <NotFound></NotFound>
         </Route>
       </Switch>
+      <Footer></Footer>
         </BrowserRouter>
+       
       </AuthProvider>
       
     </div>

@@ -44,7 +44,7 @@ const ManageOrders = () => {
     });
   };
   const approve = (id) => {
-    fetch(`http://localhost:5000/bookBike/${id}`, {
+    fetch(`https://young-bayou-81881.herokuapp.com/bookBike/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -70,7 +70,6 @@ const ManageOrders = () => {
             <Table striped bordered hover>
         <thead >
           <tr>
-            {/* <th className="text-light">Count</th> */}
             <th className="text-light">Product Name</th>
             <th className="text-light">Product img</th>
             <th className="text-light">Product Price</th>
@@ -81,8 +80,7 @@ const ManageOrders = () => {
         </thead>
         {orders?.map((pd, index) => (
           <tbody>
-            <tr>
-              {/* <td className="text-light">{index}</td> */}
+            <tr>            
               <td className="text-light">{pd.name}</td>
               <td className="text-light"><img style={{width:"70px",height:"60px"}} src={pd.img} alt="" /></td>
               <td className="text-light">${pd.price}</td>
@@ -101,44 +99,12 @@ const ManageOrders = () => {
                    >
                    <i class="fas fa-trash "></i> Delete
                 </button>
-              </td>
-              
+              </td> 
             </tr>
           </tbody>
         ))}
       </Table>
         </div>
-    // <div className="my-section">
-    //   <h3 className="text-center  py-3">Manage Orders</h3>
-    //   {orders.map((pd) => (
-    //     <div className="col-lg-6 mx-auto">
-    //       <div className=" card img-bg mb-3 ">
-    //         <div className="row ">
-    //           <div className="col-md-4 text-center">
-                
-    //         <img style={{width:"90px",height:"90px"}} src={pd.img} className=" rounded mt-3"alt="..." width="150px"/>
-    //           </div>
-    //           <div className="col-md-6">
-    //             <div className="py-2">
-    //    <p className="card-title mt-2 text-dark  mx-auto">{pd.name}</p>            
-    //            <p className="text-dark"> {pd.status}{" "} </p>
-
-    //               <button className="btn btn-success text-dark mx-auto mt-2 me-3" onClick={() =>approve(pd._id)}>Approve
-    //             </button>
-
-
-    //               <button onClick={() => handelDelete(pd._id)}
-    //                 className=" text-dark  mt-2 btn btn-danger"
-    //               >
-    //                <i class="fas fa-trash "></i> Delete
-    //               </button>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   ))}
-    // </div>
   );
 };
 

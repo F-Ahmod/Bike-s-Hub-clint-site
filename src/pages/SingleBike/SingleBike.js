@@ -5,11 +5,10 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from './../Hooks/useAuth';
 import { NavLink } from 'react-router-dom';
-import Swal from 'sweetalert2';
+// import Swal from 'sweetalert2';
 
 const SingleBike = () => {
   const {user}=useAuth();
- 
     const {id}=useParams();
     const [singleBike,setSingleBike]=useState({});
         useEffect(()=>{
@@ -23,10 +22,10 @@ const SingleBike = () => {
         
         singleBike.status='panding'
         singleBike.email=user.email
-      fetch(`https://young-bayou-81881.herokuapp.com/bookBike`,{
+        fetch(`https://young-bayou-81881.herokuapp.com/bookBike`,{
         method:"POST",
         headers:{'content-type':'application/json'},
-        body:JSON.stringify( singleBike)
+        body:JSON.stringify(singleBike)
   
       })
       .then(res => res.json())
@@ -35,18 +34,26 @@ const SingleBike = () => {
 
     const { register, handleSubmit,reset } = useForm();
     const onSubmit = data => {
-      console.log(data);
+      // console.log(data);
         axios.post('https://young-bayou-81881.herokuapp.com/bike',data)
-        .then(res=>res.json())
-        .then((data) => {
-          alert('jjjjjj')
-          // if (data.insertedId) {
-          //   Swal.fire("Added", "Added success");
-          // } else {
+        .then(res =>{
+          if(res.data.insertedId){
+              alert('added successfully');
+              reset();
+          }
+
+      })
+
+       // .then(res=>res.json(){})
+        // .then((data) => {
+          
+        //   // if (data.insertedId) {
+        //   //   Swal.fire("Added", "Added success");
+        //   // } else {
            
-          // }
-          reset()
-        });
+        //   // }
+        //   reset()
+        // });
         
 
     };

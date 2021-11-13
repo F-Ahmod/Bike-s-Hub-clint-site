@@ -1,7 +1,7 @@
 import React from 'react';
 import AddBikeHome from '../AddBikeHome/AddBikeHome';
 import Banner from '../Banner/Banner';
-import Footer from '../Footer/Footer';
+
 import BestBike from './../BestBike/BestBike';
 import ExploreBike from './../ExploreBike/ExploreBike';
 import Banner2 from './../Banner2/Banner2';
@@ -22,7 +22,7 @@ const Home = () => {
             <Clint></Clint>
             <DReview></DReview>
             
-            <Footer></Footer>
+            
            
         </div>
     );
