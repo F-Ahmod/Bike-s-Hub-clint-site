@@ -16,7 +16,7 @@ const DReview = () => {
             <div className="clint-container mt-5 me-3 ms-3 mb-3">
                 {
                     review.map(pd => <div className="card mb-3" data-aos="fade-up">
-                        <img className="mt-3" style={{ height: "100px", width: "100px" }} src={pd.img} className="mx-auto " alt="..." />
+                        <img style={{ height: "100px", width: "100px" }} src={pd.img} className="mx-auto mt-3 " alt="..." />
                         <div className="card-body">
                             <h5 className="card-title text-dark">{pd.name}</h5>
                             <p className="card-text text-dark">{pd.text}</p>
