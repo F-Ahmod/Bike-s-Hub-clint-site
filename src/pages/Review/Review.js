@@ -26,7 +26,7 @@ const Review = () => {
             <h2>Review</h2>
             <div className="">
             <form onSubmit={handleSubmit(onSubmit)} className="mt-5 ">
-            <input  defaultValue={user.email} className="w-50 mb-1" type="text" {...register("email")} Placeholder="Email"/>
+            <input  defaultValue={user.name} className="w-50 mb-1" type="text" {...register("name")} Placeholder="Name"/>
             <br />
            
             <input className="w-50 mb-3 mt-3 h-3" {...register("rating")} Placeholder="Give Rating 1 to 5"/>
