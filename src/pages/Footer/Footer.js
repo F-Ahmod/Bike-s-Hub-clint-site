@@ -46,8 +46,9 @@ const Footer = () => {
             <div className="col-md-3 mt-3 d-flex ">
                 <div style={{marginLeft:"15px"}}>
                 <h4>Follow Us</h4>
-                <i className="fab fa-facebook-square text-primary fs-2 me-2"></i>
-                <i className="fab fa-youtube-square text-danger fs-2 me-2"></i>
+                <a href="https://web.facebook.com/profile.php?id=100004528784980"><i className="fab fa-facebook-square text-primary fs-2 me-2"></i></a>
+                <a href="https://www.youtube.com/c/KasirAhmod"><i className="fab fa-youtube-square text-danger fs-2 me-2"></i></a>
+                
                 <i className="fab fa-instagram-square fs-2 me-2"></i>
                 <i className="fab fa-snapchat fs-2 text-warning me-2"></i>
                 </div>

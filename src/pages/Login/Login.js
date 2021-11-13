@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Container, Typography, TextField, Button, CircularProgress, Alert } from '@mui/material';
+import { Container, Typography, TextField, Button } from '@mui/material';
 import { Grid } from '@mui/material';
 import useAuth from './../Hooks/useAuth';
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
@@ -8,7 +8,7 @@ import { NavLink, useLocation, useHistory } from 'react-router-dom';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
-    const { loginUser, singinWithGoogle,loading,user} = useAuth();
+    const { loginUser, singinWithGoogle} = useAuth();
     const location = useLocation();
     const history = useHistory();
 

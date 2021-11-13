@@ -9,7 +9,6 @@ import MakeAdmin from './../MakeAdmin/MakeAdmin';
 import { useState } from 'react';
 import AddBike from './../../AddBike/AddBike';
 import ManageOrders from './../ManageOrders/ManageOrders';
-import Banner from "../Banner/Banner";
 import DasBanner from "../DasBanner/DasBanner";
 
 

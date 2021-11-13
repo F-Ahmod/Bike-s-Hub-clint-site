@@ -5,7 +5,8 @@ import { useForm } from 'react-hook-form';
 import { useParams } from 'react-router';
 import useAuth from './../Hooks/useAuth';
 import { NavLink } from 'react-router-dom';
-// import Swal from 'sweetalert2';
+import './SingleBike.css'
+
 
 const SingleBike = () => {
   const {user}=useAuth();
@@ -44,21 +45,11 @@ const SingleBike = () => {
 
       })
 
-       // .then(res=>res.json(){})
-        // .then((data) => {
-          
-        //   // if (data.insertedId) {
-        //   //   Swal.fire("Added", "Added success");
-        //   // } else {
-           
-        //   // }
-        //   reset()
-        // });
-        
+
 
     };
     return (
-        <div>
+        <div className="newBg ">
            
              <div classname="container  ">
            <div className="row">
@@ -76,8 +67,8 @@ const SingleBike = () => {
              </Card>
             </div>
              <div className="col-md-6">
-             <div className="mt-5 mx-auto mb-2 bg-light " style={{width:"400px",height:"350px"}}>
-            <h2>Please Confirm your order </h2>
+             <div className="mt-5 mx-auto mb-2 bg-light " style={{width:"350px",height:"300px"}}>
+            <h4 className="text-success">Please Confirm your order </h4>
             <div className="">
             <form onSubmit={handleSubmit(onSubmit)} className="mt-3 ">
             <input defaultValue={user.displayName} className="w-50 mb-1 mt-3 h-3" {...register("name")} Placeholder="Name" />
@@ -104,7 +95,7 @@ const SingleBike = () => {
         </div>
         
        <div className="text-center"> 
-       <NavLink to="/"><button  type="button" class="btn btn-success ">Go Home</button></NavLink>
+       <NavLink to="/"><button  type="button" className="btn btn-success mb-3 "><i class="fas fa-backward"></i> Go Home</button></NavLink>
        </div>
 
         </div>

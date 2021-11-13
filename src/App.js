@@ -25,6 +25,7 @@ import Privacy from './pages/Privacy/Privacy';
 import Contact from './pages/Contact/Contact';
 import Footer from './pages/Footer/Footer';
 import DasBanner from './pages/DasBanner/DasBanner';
+import BannerExpro from './pages/BannerExpro/BannerExpro';
 
 function App() {
   return (
@@ -96,6 +97,9 @@ function App() {
         </Route>
         <Route  path="/dasbanner">
           <DasBanner></DasBanner>
+        </Route>
+        <Route  path="/bannerExpro">
+          <BannerExpro></BannerExpro>
         </Route>
         
         <Route  path="*">

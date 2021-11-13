@@ -5,6 +5,7 @@ import { useHistory } from 'react-router';
 import Rating from 'react-rating';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import BannerExpro from '../BannerExpro/BannerExpro';
 
 
 const ExploreBikes = () => {
@@ -32,6 +33,7 @@ const ExploreBikes = () => {
     return (
 
         <div >
+            
             <div className="container mb-5 mt-5" >
             {
                bike.map(bike =>bike?.show==="cycle" && <div data-aos="fade-up">
@@ -60,7 +62,9 @@ const ExploreBikes = () => {
            }
            
             </div>
-           
+            <div>
+                <BannerExpro></BannerExpro>
+            </div>
         </div>
        
     );
