@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
   const [Status, setStatus] = useState();
   useEffect(() => {
-    fetch("http://localhost:5000/bookBike")
+    fetch("https://young-bayou-81881.herokuapp.com/bookBike")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [Delete, Status]);

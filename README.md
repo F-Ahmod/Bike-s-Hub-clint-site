@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## about Website
+1.This is a full stack single-page application e-commerce related website.
+2.Login & registration by using firebase.
+3.User and admin dashboard, user will control his order from dashboard and an 
+admin will control all users order from admin dashboard and admin can make 
+an admin & they can add a product etc.
+
 ### `npm start`
 
 ## Runs the app in the development mode.
