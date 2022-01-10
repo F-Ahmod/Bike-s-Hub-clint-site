@@ -25,8 +25,8 @@ const {leLogout,user}=useAuth();
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link className="nav-link active" aria-current="page" to="/home">Home</Link>
-        <Link className="nav-link active" to="/findMore">Find More</Link>
-        <Link className="nav-link active" to="/exploreBikes">Explore bike</Link>
+        <Link className="nav-link active" to="/findMore">Info</Link>
+        <Link className="nav-link active" to="/exploreBikes">Best Bikes</Link>
         
         {!user?.email ?
        <>
