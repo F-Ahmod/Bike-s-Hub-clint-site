@@ -23,7 +23,7 @@ const Register = () => {
 
 
   return (
-    <div className="mt-5 mx-auto" style={{backgroundColor:"#738988  ",width:"400px",height:"350px"}}>
+    <div className="mt-5 mb-3 mx-auto" style={{backgroundColor:"#738988  ",width:"400px",height:"350px"}}>
       
       <form  onSubmit={handleSubmit(onSubmit)}>
         <input style={{marginTop:"100px"}} 

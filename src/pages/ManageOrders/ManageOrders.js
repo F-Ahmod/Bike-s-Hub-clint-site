@@ -70,21 +70,21 @@ const ManageOrders = () => {
             <Table striped bordered hover>
         <thead >
           <tr>
-            <th className="text-light">Product Name</th>
-            <th className="text-light">Product img</th>
-            <th className="text-light">Product Price</th>
-            <th className="text-light">Product Status</th>
-            <th className="text-light">Action</th>
+            <th className="">Product Name</th>
+            <th className="">Product img</th>
+            <th className="">Product Price</th>
+            <th className="">Product Status</th>
+            <th className="">Action</th>
           </tr>
         </thead>
         {orders?.map((pd, index) => (
           <tbody>
             <tr>            
-              <td className="text-light">{pd.name}</td>
-              <td className="text-light"><img style={{width:"70px",height:"60px"}} src={pd.img} alt="" /></td>
-              <td className="text-light">${pd.price}</td>
+              <td className="">{pd.name}</td>
+              <td className=""><img style={{width:"70px",height:"60px"}} src={pd.img} alt="" /></td>
+              <td className="">${pd.price}</td>
               <td>
-              <select onClick={() =>approve(pd._id)} class="form-select text-dark" aria-label="Default select example">
+              <select onClick={() =>approve(pd._id)} class="form-select text-light" aria-label="Default select example">
   
                <option value={pd?.status}> {pd?.status}</option>
                <option value="approve">Approve</option>
@@ -92,7 +92,7 @@ const ManageOrders = () => {
               </td>
               <td>
               <button onClick={() => handelDelete(pd._id)}
-                   className=" text-dark  mt-2 btn btn-danger"
+                   className=" text-light  mt-2 btn btn-danger"
                    >
                    <i class="fas fa-trash "></i> Delete
                 </button>

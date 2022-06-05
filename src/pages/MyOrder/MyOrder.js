@@ -67,20 +67,20 @@ const MyOrder = () => {
       <Table striped bordered hover>
         <thead >
           <tr>         
-            <th className="text-light">Product Name</th>
-            <th className="text-light">Product img</th>
-            <th className="text-light">Product Price</th>
-            <th className="text-light">Product Status</th>
-            <th className="text-light">Action</th>
+            <th className="">Product Name</th>
+            <th className="">Product img</th>
+            <th className="">Product Price</th>
+            <th className="">Product Status</th>
+            <th className="">Action</th>
           </tr>
         </thead>
         {myOrder?.map((pd) => (
           <tbody>
             <tr>            
-              <td className="text-light">{pd.name}</td>
-              <td className="text-light"><img style={{ width: "70px", height: "60px" }} src={pd.img} alt="" /></td>
-              <td className="text-light">${pd.price}</td>
-              <button type="button" class="bg-dark text-light rounded "><i class="far fa-check-square"></i> {pd?.status}</button>
+              <td className="">{pd.name}</td>
+              <td className=""><img style={{ width: "70px", height: "60px" }} src={pd.img} alt="" /></td>
+              <td className="">${pd.price}</td>
+              <button type="button" class="mt-3  rounded "><i class="far fa-check-square"></i> {pd?.status}</button>
               <td>
                 <button onClick={() => deleteOrder(pd._id)} type="button" class="btn btn-danger ">  <i class="fas fa-trash "></i> Delete</button>
               </td>

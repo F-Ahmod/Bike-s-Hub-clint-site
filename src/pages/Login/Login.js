@@ -28,7 +28,7 @@ const Login = () => {
         singinWithGoogle(location, history)
     }
     return (
-        <Container className="mt-5" style={{backgroundColor:"lightGreen",width:"400px"}}>             
+        <Container className="mt-5 mb-3" style={{backgroundColor:"lightGreen",width:"400px"}}>             
             <Grid container spacing={2}>
                 <Grid item sx={{ mt: 8 }} >
                     <Typography variant="body1" gutterBottom className="text-light fs-2">Please Login</Typography>
